@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import '../screens/add_tasks_screen.dart';
 import '../widgets/tasks_list.dart';
 import './add_tasks_screen.dart';
-//import '../models/task.dart';
 import '../models/task_data.dart';
 
 class TasksScreen extends StatefulWidget {
@@ -28,14 +27,7 @@ class _TasksScreenState extends State<TasksScreen> {
               child: Container(
                 padding: EdgeInsets.only(
                     bottom: MediaQuery.of(context).viewInsets.bottom),
-                child: AddTasksScreen(
-                  addTaskCallback: (newTaskTitle) {
-                    // setState(() {
-                    //   tasks.add(Task(name: newTaskTitle));
-                    // });
-                    Navigator.pop(context);
-                  },
-                ),
+                child: const AddTasksScreen(),
               ),
             ),
           );
